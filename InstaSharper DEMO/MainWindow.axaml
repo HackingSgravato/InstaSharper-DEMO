@@ -1,0 +1,76 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="2000" d:DesignHeight="450"
+        x:Class="InstaSharper_DEMO.MainWindow"
+        Title="InstaSharper DEMO">
+
+	<Grid RowDefinitions="auto, auto, auto, auto, *">
+
+		<!-- grid 0 -->
+		<Grid ColumnDefinitions="auto, auto, auto" Grid.Row="0">
+			
+			<!-- grid 0 -->
+			<TextBox Name="TextBoxUser" CornerRadius="10" Grid.Column="0" Watermark="Username" Margin="10"></TextBox>
+		
+			<!-- grid 1 -->
+			<Separator Width="10" CornerRadius="10" Background="Gray" Margin="5" Grid.Column="1"></Separator>
+			
+			<!-- grid 2-->
+			<Label Name="MyUserIDLabel" Content="ID utente: non definito" Margin="10, 14, 0, 0" Grid.Column="2"></Label>
+		
+		</Grid>
+		
+		<!-- grid 1 -->
+		<TextBox Name="TextBoxPass" CornerRadius="10" Grid.Row="1" PasswordChar="*" Watermark="Password" Margin="10, 0, 10, 10"></TextBox>
+		
+		<!-- grid 2 -->
+		<Grid Margin="10, 0, 0, 10" Grid.Row="2" ColumnDefinitions="auto, auto,auto,auto, auto, auto, auto">
+			
+			<!-- grid 0 -->
+			<Button Name="MyLoginButton" CornerRadius="10" Grid.Column="0" Content="Login" ></Button>
+			
+			<!-- grid 1 -->
+			<Button Name="MyShowPasswordButton" CornerRadius="10" Grid.Column="1" Content="Mostra password" Margin="10, 0, 0, 0" ></Button>
+			
+			<!-- grid 2 -->
+			<Button Name="MyDeselectionButton" CornerRadius="10" Content="Deseleziona utente selezionato" Grid.Column="2" Margin="10, 0, 0, 0"></Button>
+		
+			<!-- grid 3 -->
+			<Button Name="MyUnfollowButton" CornerRadius="10" Content="Togli il follow alle persone presenti nella lista" Grid.Column="3" Margin="10, 0, 0, 0"></Button>
+			
+			<!-- grid 4 -->
+			<Label Name="MyLabel" IsVisible="False" Margin="10, 3, 0, 0" Grid.Column="4"></Label>
+
+			<!-- grid 5 -->
+			<Label Name="MyCounterLabel" Content="Utenti deselezionati: non definito" IsVisible="True" Margin="10, 3, 0, 0" Grid.Column="5"></Label>
+
+			<!-- grid 6 -->
+			<CheckBox Name="MyLimiterCheckBox" Content="Attiva limitazione numero di unfollows" Margin="10, 0, 0, 0" Grid.Column="6"></CheckBox>
+		
+		</Grid>
+
+		<!-- grid 3-->
+		<Grid ColumnDefinitions="auto, auto, auto, auto" Grid.Row="3">
+			
+			<!-- grid 0 -->
+			<TextBox Name="MyTextBox" CornerRadius="10" Grid.Column="0" Watermark="Cerca nella lista dei seguiti" Margin="10"></TextBox>
+			
+			<!-- grid 1-->
+			<Button Name="MyFinderButton" Content="Trova occorrenze" CornerRadius="10" Grid.Column="1"></Button>
+		
+			<!-- grid 2-->
+			<Button Name="MyBackButton" Content="Torna alla lista dei followers" Margin="10, 0, 0, 0" CornerRadius="10" Grid.Column="2"></Button>
+		
+			<!-- grid 3 -->
+			<Button Name="MyRefreshFollowersButton" Content="Aggiorna la lista dei followers" Margin="10, 0, 0, 0" CornerRadius="10" Grid.Column="3"></Button>
+		
+		</Grid>
+		
+		<!-- grid 4-->
+		<ListBox Name="MyListBox" SelectionMode="Single" CornerRadius="10" Grid.Row="4" Margin="10, 0, 10, 10"></ListBox>
+	
+	</Grid>
+
+</Window>
