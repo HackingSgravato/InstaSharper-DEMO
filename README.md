@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="#Features">Features</a> •
-  <a href="#License">License</a> •
+  <a href="#License">License</a>
 </p>
 
 ## Features
